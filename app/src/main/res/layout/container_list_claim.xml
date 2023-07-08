@@ -141,6 +141,8 @@
                 android:layout_height="match_parent"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:itemCount="2"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="147dp"
                 tools:listitem="@layout/item_claim" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
