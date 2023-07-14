@@ -21,17 +21,14 @@ import org.junit.runner.RunWith
 
 
 
-const val MODEL_PACKAGE = "ru.iteco.fmhandroid"
 
-
-const val TIMEOUT = 5000L
 
 @RunWith(AndroidJUnit4::class)
-class FillingClaimsTest {
+class OurMissionTest {
 
     private lateinit var device: UiDevice
-    private val textToSet = "The changes won't be saved, do you really want to log out?"
-    private val text1 = "Filtering"
+    private val textToSet = "Love is all"
+
 
     private fun waitForPackage(packageName: String) {
         val context = ApplicationProvider.getApplicationContext<Context>()
@@ -56,35 +53,17 @@ class FillingClaimsTest {
 
 
     @Test
-    fun testExitCreatingClaimsTest() {
+    fun testOurMissionText() {
         val packageName = MODEL_PACKAGE
         waitForPackage(packageName)
         Thread.sleep(5000)
 
-        device.findObject(By.res(packageName, "main_menu_image_button")).click()
-        device.findObject(UiSelector().resourceId( "android:id/title").instance(1)).click()
-        device.findObject(By.res(packageName,"add_new_claim_material_button")).click()
-        Thread.sleep(1000)
-        device.findObject(By.res(packageName,"cancel_button")).click()
-        //Thread.sleep(1000)
-        val result = device.findObject(UiSelector().resourceId( "android:id/message")).text
+        device.findObject(By.res(packageName, "our_mission_image_button")).click()
+
+
+
+        val result = device.findObject(By.res(packageName, "our_mission_title_text_view")).text
         assertEquals(result, textToSet)
 
     }
-    @Test
-    fun testOpenClaimsFiltrTest() {
-        val packageName = MODEL_PACKAGE
-        waitForPackage(packageName)
-        Thread.sleep(5000)
-
-        device.findObject(By.res(packageName, "main_menu_image_button")).click()
-        device.findObject(UiSelector().resourceId( "android:id/title").instance(1)).click()
-        device.findObject(By.res(packageName,"filters_material_button")).click()
-        Thread.sleep(1000)
-        val result =device.findObject(By.res(packageName,"claim_filter_dialog_title")).text
-        assertEquals(result,text1)
-
-
-    }
 }
-

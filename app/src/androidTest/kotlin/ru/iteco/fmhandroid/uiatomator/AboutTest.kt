@@ -21,17 +21,16 @@ import org.junit.runner.RunWith
 
 
 
-const val MODEL_PACKAGE = "ru.iteco.fmhandroid"
 
-
-const val TIMEOUT = 5000L
 
 @RunWith(AndroidJUnit4::class)
-class FillingClaimsTest {
+class AboutTest {
 
     private lateinit var device: UiDevice
-    private val textToSet = "The changes won't be saved, do you really want to log out?"
-    private val text1 = "Filtering"
+    private val textToSet = "© I-Teco, 2022"
+    private val text1 = "ALL NEWS"
+
+
 
     private fun waitForPackage(packageName: String) {
         val context = ApplicationProvider.getApplicationContext<Context>()
@@ -54,37 +53,44 @@ class FillingClaimsTest {
 
     }
 
-
+    // - Загрузилось приложение, открылась Главная страница
+    // - Нажать кнопку Главное меню
+    // - Нажать кнопку About
+    // - Открылась строница About
     @Test
-    fun testExitCreatingClaimsTest() {
+    fun testAboutText() {
         val packageName = MODEL_PACKAGE
         waitForPackage(packageName)
         Thread.sleep(5000)
 
         device.findObject(By.res(packageName, "main_menu_image_button")).click()
-        device.findObject(UiSelector().resourceId( "android:id/title").instance(1)).click()
-        device.findObject(By.res(packageName,"add_new_claim_material_button")).click()
+        device.findObject(UiSelector().resourceId("android:id/title").instance(3)).click()
         Thread.sleep(1000)
-        device.findObject(By.res(packageName,"cancel_button")).click()
-        //Thread.sleep(1000)
-        val result = device.findObject(UiSelector().resourceId( "android:id/message")).text
-        assertEquals(result, textToSet)
+
+        val result = device.findObject(By.res(packageName, "about_company_info_label_text_view")).text
+        assertEquals(result,textToSet)
 
     }
+
+    // - Загрузилось приложение, открылась Главная страница
+    // - Нажать кнопку Главное меню
+    // - Нажать кнопку About
+    // - Открылась строница About
+    // - Нажать кнопку Назад
+    // - Открылясь Главная страница
     @Test
-    fun testOpenClaimsFiltrTest() {
+    fun testWorkButtonBackText() {
         val packageName = MODEL_PACKAGE
         waitForPackage(packageName)
         Thread.sleep(5000)
 
         device.findObject(By.res(packageName, "main_menu_image_button")).click()
-        device.findObject(UiSelector().resourceId( "android:id/title").instance(1)).click()
-        device.findObject(By.res(packageName,"filters_material_button")).click()
+        device.findObject(UiSelector().resourceId("android:id/title").instance(3)).click()
+        device.findObject(By.res(packageName, "about_back_image_button")).click()
         Thread.sleep(1000)
-        val result =device.findObject(By.res(packageName,"claim_filter_dialog_title")).text
-        assertEquals(result,text1)
 
+       val result = device.findObject(By.res(packageName, "all_news_text_view")).text
+       assertEquals(result,text1)
 
     }
 }
-
