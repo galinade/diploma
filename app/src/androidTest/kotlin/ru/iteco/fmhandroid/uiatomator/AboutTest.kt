@@ -13,6 +13,7 @@ import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.UiSelector
 import androidx.test.uiautomator.Until
+import io.qameta.allure.android.runners.AllureAndroidJUnit4
 import org.hamcrest.Matchers
 import org.junit.Assert.assertEquals
 import org.junit.Before
@@ -23,7 +24,8 @@ import org.junit.runner.RunWith
 
 
 
-@RunWith(AndroidJUnit4::class)
+//@RunWith(AndroidJUnit4::class)
+@RunWith(AllureAndroidJUnit4::class)
 class AboutTest {
 
     private lateinit var device: UiDevice

@@ -28,6 +28,7 @@ class OurMissionTest {
 
     private lateinit var device: UiDevice
     private val textToSet = "Love is all"
+    private val text1 = "our_mission_item_material_card_view"
 
 
     private fun waitForPackage(packageName: String) {
@@ -61,9 +62,23 @@ class OurMissionTest {
         device.findObject(By.res(packageName, "our_mission_image_button")).click()
 
 
-
         val result = device.findObject(By.res(packageName, "our_mission_title_text_view")).text
         assertEquals(result, textToSet)
+
+    }
+
+    @Test
+    fun testOurMissionExpand() {
+        val packageName = MODEL_PACKAGE
+        waitForPackage(packageName)
+        Thread.sleep(5000)
+
+        device.findObject(By.res(packageName, "our_mission_image_button")).click()
+        device.findObject(By.res(packageName, "our_mission_item_list_recycler_view")).click()
+
+        val result = device.findObject(By.res(packageName, "our_mission_item_description_text_view")).text
+        Thread.sleep(10000)
+        assertEquals(result, text1)
 
     }
 }
