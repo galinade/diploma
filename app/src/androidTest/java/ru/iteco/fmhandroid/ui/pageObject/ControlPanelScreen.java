@@ -26,7 +26,7 @@ import static ru.iteco.fmhandroid.ui.data.DataHelper.withIndex;
 
 
 public class ControlPanelScreen {
-    private final ViewInteraction controlPanel = onView(withText(containsString("Панель")));
+    private final ViewInteraction controlPanel = onView(withText(containsString("Control panel")));
     private final ViewInteraction sortNewsButton = onView(withId(R.id.sort_news_material_button));
     private final ViewInteraction filterNewsButton = onView(withId(R.id.filter_news_material_button));
     private final ViewInteraction createNewsButton = onView(withId(R.id.add_news_image_view));
@@ -71,6 +71,8 @@ public class ControlPanelScreen {
     public ViewInteraction getCancelDeleteNewsButton() {
         return cancelDeleteNewsButton;
     }
+
+
     //"Проверка отображения экрана Панель управления новостей"
     public void checkControlPanelScreenIsDisplayed() {
         onView(isRoot()).perform(waitUntilShown(R.id.news_list_recycler_view, 3000));

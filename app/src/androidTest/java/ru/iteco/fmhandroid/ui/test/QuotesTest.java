@@ -12,8 +12,7 @@ public class QuotesTest extends BaseAndroidTest {
     QuotesScreen quotesScreen = new QuotesScreen();
 
     @Test
-    //
-    // "Открытие описания цитаты через тап на цитату\"")
+    @DisplayName("Открытие описания цитаты через тап на цитату")
     public void shouldCollapseAndExpandQuoteDescription() {
         mainScreen.goToSectionQuotesFromAppBar();
         quotesScreen.checkQuotesScreenIsDisplayed();
@@ -24,6 +23,6 @@ public class QuotesTest extends BaseAndroidTest {
                 "никто не осудит, где говоришь, и тебя слышат, где, если страшно, тебя обнимут и возьмут за руку, " +
                 "а если холодно тебя согреют.” Юля Капис, волонтер";
 
-       // quotesScreen.checkTitleAndDescriptionOfQuote(title, description);
+        quotesScreen.checkTitleAndDescriptionOfQuote(title, description);
     }
 }

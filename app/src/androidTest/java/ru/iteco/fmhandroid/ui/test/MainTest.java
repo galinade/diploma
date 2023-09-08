@@ -24,14 +24,14 @@ public class MainTest extends BaseAndroidTest {
     NewsScreen newsScreen = new NewsScreen();
 
     @Test
-    //"Выход из аккаунта"
+    @DisplayName("Выход из аккаунта")
     public void shouldLogout() {
         mainScreen.logout();
         authorizationScreen.checkAuthorizationScreenIsDisplayed();
     }
 
     @Test
-    //Отображение раздела Новости на экране Главная через тап на кнопку свернуть/развернуть\"
+     @DisplayName("Отображение раздела Новости на экране Главная через тап на кнопку свернуть/развернуть")
     public void shouldCollapseAndExpandNewsFeed() {
         mainScreen.expandNewsFeed();
         mainScreen.checkNameAllNewsIsNotVisible();
@@ -40,14 +40,14 @@ public class MainTest extends BaseAndroidTest {
     }
 
     @Test
-    //"Открытие описания новости через тап на новость из раздела Новости"
+    @DisplayName("Открытие описания новости через тап на новость из раздела Новости")
     public void shouldCollapseAndExpandNewsDescription() {
         mainScreen.expandNewsDescription(0);
         mainScreen.checkTextOfNewsDescriptionIsVisible(0);
     }
 
     @Test
-    //"Отображение раздела Заявки на экране Главная через тап на кнопку свернуть/развернуть\"
+    @DisplayName("Отображение раздела Заявки на экране Главная через тап на кнопку свернуть/развернуть")
     public void shouldCollapseAndExpandClaimsFeed() {
         mainScreen.expandClaimsFeed();
         mainScreen.checkNameAllClaimsIsNotVisible();
@@ -56,14 +56,14 @@ public class MainTest extends BaseAndroidTest {
     }
 
     @Test
-    //"Открытие детального описания заявки через тап на заявку из раздела Заявки\"
+    @DisplayName("Открытие детального описания заявки через тап на заявку из раздела Заявки")
     public void shouldGoToClaimDescriptionWhenClickOnClaim() {
         mainScreen.clickOnClaim(0);
         claimsScreen.checkScreenOfDetailedDescriptionClaimIsDisplayed();
     }
 
     @Test
-    //Возврат к экрану Главная через меню-гамбургер"
+    @DisplayName("Возврат к экрану Главная через меню-гамбургер")
     public void shouldGoToSectionMainFromMainMenu() {
         mainScreen.goToSectionNewsFromMainMenu();
         newsScreen.checkNewsScreenIsDisplayed();

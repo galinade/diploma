@@ -65,11 +65,50 @@ public class DataHelper {
         String password = "password2";
         return new AuthInfo(login, password);
     }
+    public static AuthInfo invalidLogin() {
+        String login = "login3";
+        String password = "password2";
+        return new AuthInfo(login, password);
+    }
+
+    public static AuthInfo invalidPassword() {
+        String login = "login2";
+        String password = "password3";
+        return new AuthInfo(login, password);
+    }
 
 
 
+    public static AuthInfo loginWithWhitespace() {
+        String login = " login2 ";
+        String password = "password2";
+        return new AuthInfo(login, password);
+    }
+
+    public static AuthInfo passwordWithWhitespace() {
+        String login = "login2";
+        String password = " password2 ";
+        return new AuthInfo(login, password);
+    }
+
+    public static AuthInfo emptyLogin() {
+        String login = "";
+        String password = " password2 ";
+        return new AuthInfo(login, password);
+    }
+
+    public static AuthInfo emptyPassword() {
+        String login = "login2";
+        String password = "";
+        return new AuthInfo(login, password);
+    }
 
 
+    public static String snackWrongLoginOrPassword = "Wrong login or password";
+
+    public static String snackEmptyLoginOrPassword = "Login and password cannot be empty";
+
+    public static String snackEmptyField = "Поле не может быть пустым.";
     public static Matcher<View> withIndex(final Matcher<View> matcher, final int index) {
         return new TypeSafeMatcher<View>() {
             int currentIndex = 0;

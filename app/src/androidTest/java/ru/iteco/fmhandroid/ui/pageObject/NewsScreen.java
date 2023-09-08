@@ -20,7 +20,7 @@ import androidx.test.espresso.ViewInteraction;
 import ru.iteco.fmhandroid.R;
 
 public class NewsScreen {
-    private final ViewInteraction newsSectionTitle = onView(withText("Новости"));
+    private final ViewInteraction newsSectionTitle = onView(withText("News"));
     private final ViewInteraction sortNewsButton = onView(withId(R.id.sort_news_material_button));
     private final ViewInteraction filterNewsButton = onView(withId(R.id.filter_news_material_button));
     private final ViewInteraction editNewsButton = onView(withId(R.id.edit_news_material_button));
@@ -31,6 +31,10 @@ public class NewsScreen {
                     withClassName(is("android.widget.LinearLayout")), withId(R.id.all_news_cards_block_constraint_layout),
                     0)));
 
+    private final ViewInteraction filterTitle = onView(withId(R.id.filter_news_title_text_view));
+
+    private final ViewInteraction createTitle = onView(withId(R.id.custom_app_bar_title_text_view));
+    private final ViewInteraction newsTitle = onView(withId(R.id.custom_app_bar_sub_title_text_view));
 
     public ViewInteraction getNewsSectionTitle() {
         return newsSectionTitle;
@@ -50,6 +54,14 @@ public class NewsScreen {
     public ViewInteraction getExpandNewsDescriptionButton() {
         return expandNewsDescriptionButton;
     }
+    public ViewInteraction getFilterTitle() {return filterTitle;}
+    public ViewInteraction getCreateTitle() {
+        return createTitle;
+    }
+    public ViewInteraction getNewsTitle() {
+        return newsTitle;
+    }
+
     //"Проверка отображения экрана Новости"
     public void checkNewsScreenIsDisplayed() {
         onView(isRoot()).perform(waitUntilShown(R.id.news_list_recycler_view, 3000));
@@ -84,6 +96,17 @@ public class NewsScreen {
     public void checkTextOfNewsDescriptionIsVisible(int position) {
         onView(withIndex(withId(R.id.news_item_description_text_view), position)).check(matches(isDisplayed()));
     }
+    //"Проверка отображения экрана Фильтрация новостей"
+    public void checkFilterNewsScreenIsDisplayed() {
+        onView(isRoot()).perform(waitUntilShown(R.id.filter_news_title_text_view, 3000));
+        getFilterTitle().check(matches(isDisplayed()));
+    }
 
+    //"Проверка отображения экрана создания новости"
+    public void checkCreateNewsScreenIsDisplayed() {
+        onView(isRoot()).perform(waitUntilShown(R.id.save_button, 3000));
+        getCreateTitle().check(matches(isDisplayed()));
+        getNewsTitle().check(matches(isDisplayed()));
+    }
 }
 

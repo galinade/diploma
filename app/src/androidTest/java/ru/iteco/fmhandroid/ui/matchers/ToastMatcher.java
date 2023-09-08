@@ -1,5 +1,4 @@
-package ru.iteco.fmhandroid.ui.matcher;
-
+package ru.iteco.fmhandroid.ui.matchers;
 import android.os.IBinder;
 import android.view.WindowManager;
 
@@ -29,4 +28,5 @@ public class ToastMatcher extends TypeSafeMatcher<Root> {
     }
 
 }
+
 

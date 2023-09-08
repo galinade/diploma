@@ -8,6 +8,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
+import static androidx.test.espresso.matcher.ViewMatchers.withHint;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
@@ -32,7 +33,7 @@ public class ClaimsScreen {
     private final ViewInteraction createDateLabel = onView(withId(R.id.create_data_label_text_view));
     private final ViewInteraction listOfComments = onView(withId(R.id.claim_comments_list_recycler_view));
 
-    private final ViewInteraction claimsSectionTitle = onView(withText("Заявки"));
+    private final ViewInteraction claimsSectionTitle = onView(withText("Claims"));
     private final ViewInteraction filterButton = onView(withId(R.id.filters_material_button));
     private final ViewInteraction createButton = onView(withId(R.id.add_new_claim_material_button));
 
@@ -42,14 +43,21 @@ public class ClaimsScreen {
 
     private final ViewInteraction addCommentButton = onView(withId(R.id.add_comment_image_button));
 
+    private final ViewInteraction filterTitle = onView(withId(R.id.claim_filter_dialog_title));
+    private final ViewInteraction checkBoxOpened = onView(withId(R.id.item_filter_open));
+    private final ViewInteraction checkBoxInProgress = onView(withId(R.id.item_filter_in_progress));
+    private final ViewInteraction checkBoxExecuted = onView(withId(R.id.item_filter_executed));
+    private final ViewInteraction checkBoxCancelled = onView(withId(R.id.item_filter_cancelled));
+    private final ViewInteraction okButton = onView(withId(R.id.claim_list_filter_ok_material_button));
+
     private final ViewInteraction statusOpened = onView(allOf(withId(R.id.status_label_text_view),
-            withText("Открыта")));
+            withText("Open")));
     private final ViewInteraction statusInProgress = onView(allOf(withId(R.id.status_label_text_view),
-            withText("В работе")));
+            withText("In progress")));
     private final ViewInteraction statusExecuted = onView(allOf(withId(R.id.status_label_text_view),
-            withText("Выполнена")));
+            withText("Executed")));
     private final ViewInteraction statusCancelled = onView(allOf(withId(R.id.status_label_text_view),
-            withText("Отменена")));
+            withText("Cancelled")));
 
     private ViewInteraction editCommentButton = onView(
             allOf(withId(R.id.edit_comment_image_button), withContentDescription("кнопка редактирования комментария"),
@@ -92,9 +100,11 @@ public class ClaimsScreen {
                             0),
                     0)));
 
-    private final ViewInteraction commentField = onView(withId(R.id.editText));
-    private final ViewInteraction okButton = onView(withText("ОК"));
-    private final ViewInteraction cancelButton = onView(withText("ОТМЕНА"));
+
+
+    private final ViewInteraction createTitle = onView(withId(R.id.custom_app_bar_title_text_view));
+    private final ViewInteraction claimsTitle = onView(withId(R.id.custom_app_bar_sub_title_text_view));
+
 
     public ViewInteraction getTitleLabel() {
         return titleLabel;
@@ -119,6 +129,25 @@ public class ClaimsScreen {
     }
     public ViewInteraction getListOfComments() {
         return listOfComments;
+    }
+
+    public ViewInteraction getFilterTitle() {
+        return filterTitle;
+    }
+    public ViewInteraction getCheckBoxOpened() {
+        return checkBoxOpened;
+    }
+    public ViewInteraction getCheckBoxInProgress() {
+        return checkBoxInProgress;
+    }
+    public ViewInteraction getCheckBoxExecuted() {
+        return checkBoxExecuted;
+    }
+    public ViewInteraction getCheckBoxCancelled() {
+        return checkBoxCancelled;
+    }
+    public ViewInteraction getOkButton() {
+        return okButton;
     }
     public ViewInteraction getClaimsSectionTitle() {
         return claimsSectionTitle;
@@ -174,14 +203,12 @@ public class ClaimsScreen {
     public ViewInteraction getCancel() {
         return cancel;
     }
-    public ViewInteraction getCommentField() {
-        return commentField;
+
+    public ViewInteraction getCreateTitle() {
+        return createTitle;
     }
-    public ViewInteraction getOkButton() {
-        return okButton;
-    }
-    public ViewInteraction getCancelButton() {
-        return cancelButton;
+    public ViewInteraction getClaimsTitle() {
+        return claimsTitle;
     }
     public void setEditCommentButton(int position) {
         this.editCommentButton = onView(
@@ -211,13 +238,22 @@ public class ClaimsScreen {
         getFilterButton().check(matches(isDisplayed()));
         getCreateButton().check(matches(isDisplayed()));
     }
-
+    //"Проверка отображения экрана создания заявки"
+    public void checkCreateClaimScreenIsDisplayed() {
+        onView(isRoot()).perform(waitUntilShown(R.id.custom_app_bar_title_text_view, 3000));
+        getCreateTitle().check(matches(isDisplayed()));
+        getClaimsTitle().check(matches(isDisplayed()));
+    }
     //"Нажатие на кнопку Плюс (создать заявку)"
     public void clickButtonCreateClaim() {
         getCreateButton().perform(click());
     }
 
-
+    //"Нажатие на кнопку Фильтр")
+    public void goToFilterClaimsScreen() {
+        getFilterButton().perform(click());
+        getFilterTitle().check(matches(isDisplayed()));
+    }
 
     //"Проверка статуса В работе"
     public void checkStatusInProgress() {
@@ -278,30 +314,41 @@ public class ClaimsScreen {
         getEditClaimButton().perform(click());
     }
 
-    //"Нажатие на стрелку Назад"
-    public void clickButtonReturn() {
-        getReturnButton().perform(click());
+
+    //"Проверка отображения экрана Фильтрация заявок"
+    public void checkFilterClaimsScreenIsDisplayed() {
+        onView(isRoot()).perform(waitUntilShown(R.id.claim_filter_dialog_title, 3000));
+        getFilterTitle().check(matches(isDisplayed()));
     }
 
-    //"Заполнение поля комментарий с последующим нажатием на ОК"
-    public void fillTheFieldCommentAndSave(String comment) {
-        onView(isRoot()).perform(waitUntilShown(R.id.editText, 3000));
-        getCommentField().perform(replaceText(comment));
+    //"Фильтрация заявок по категории \"В работе\""
+    public void filterClaimsInProgress() {
+        getCheckBoxOpened().perform(click());
+        getOkButton().perform(click());
+    }
+    //"Фильтрация заявок по категории \"Открыта\""
+    public void filterClaimsOpened() {
+        getCheckBoxInProgress().perform(click());
         getOkButton().perform(click());
     }
 
-    //"Заполнение поля комментарий с последующим нажатием на Отмена"
-    public void fillTheFieldCommentAndCancel(String comment) {
-        onView(isRoot()).perform(waitUntilShown(R.id.editText, 3000));
-        getCommentField().perform(replaceText(comment));
-        getCancelButton().perform(click());
-    }
-
-    //"Нажатие на кнопку ОК без заполнения значением поля комментарий"
-    public void clickOkButtonWithoutComment() {
-        onView(isRoot()).perform(waitUntilShown(R.id.editText, 3000));
+    //"Фильтрация заявок по категории \"Выполнена\""
+    public void filterClaimsExecuted() {
+        getCheckBoxOpened().perform(click());
+        getCheckBoxInProgress().perform(click());
+        getCheckBoxExecuted().perform(click());
         getOkButton().perform(click());
     }
+
+    //"Фильтрация заявок по категории \"Отменена\""
+    public void filterClaimsCancelled() {
+        getCheckBoxOpened().perform(click());
+        getCheckBoxInProgress().perform(click());
+        getCheckBoxCancelled().perform(click());
+        getOkButton().perform(click());
+    }
+
+
 }
 
 

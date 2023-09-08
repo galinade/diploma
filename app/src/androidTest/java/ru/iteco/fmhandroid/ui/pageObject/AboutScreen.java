@@ -31,13 +31,13 @@ public class AboutScreen {
     public ViewInteraction getBackButton() {
         return backButton;
     }
+
     //"Проверка отображения экрана О приложении"
     public void checkAboutScreenIsDisplayed() {
         onView(isRoot()).perform(waitUntilShown(R.id.about_company_info_label_text_view, 3000));
         getVersion().check(matches(isDisplayed()));
         getNumberVersion().check(matches(isDisplayed()));
     }
-
     //"Проверка кликабельности ссылки Политика конфиденциальности"
     public void checkPrivacyPolicyLinkIsClickable() {
         getPrivacyPolicyLink().check(matches(isClickable()));

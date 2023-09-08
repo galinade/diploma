@@ -30,14 +30,13 @@ import static org.hamcrest.Matchers.not;
 public class MainScreen {
 
     private final ViewInteraction avatarImageButton = onView(withId(R.id.authorization_image_button));
-    private final ViewInteraction exitButton = onView(withText("Выйти"));
+    private final ViewInteraction exitButton = onView(withText("Log out"));
     private final ViewInteraction mainMenuButton = onView(withId(R.id.main_menu_image_button));
-    private final ViewInteraction sectionMain = onView(withText("Главная"));
-    private final ViewInteraction sectionClaims = onView(withText("Заявки"));
-    private final ViewInteraction sectionNews = onView(withText("Новости"));
-    private final ViewInteraction sectionAbout = onView(withText("О приложении"));
+    private final ViewInteraction sectionMain = onView(withText("Main"));
+    private final ViewInteraction sectionClaims = onView(withText("Claims"));
+    private final ViewInteraction sectionNews = onView(withText("News"));
+    private final ViewInteraction sectionAbout = onView(withText("About"));
     private final ViewInteraction allNewsButton = onView(withId(R.id.all_news_text_view));
-
     private final ViewInteraction expandNewsFeedButton = onView(allOf(withId(R.id.expand_material_button),
            childAtPosition(withClassName(is("android.widget.LinearLayout")), childAtPosition(
                            withClassName(is("android.widget.LinearLayout")), withId(R.id.container_list_news_include_on_fragment_main),
@@ -89,9 +88,7 @@ public class MainScreen {
     public ViewInteraction getSectionAbout() {
         return sectionAbout;
     }
-    public ViewInteraction getAllNewsButton() {
-        return allNewsButton;
-    }
+    public ViewInteraction getAllNewsButton() { return allNewsButton; }
     public ViewInteraction getExpandNewsFeedButton() {
         return expandNewsFeedButton;
     }
@@ -117,7 +114,7 @@ public class MainScreen {
 
     //"Проверка отображения экрана Главная"
     public void checkMainScreenIsDisplayed() {
-        onView(isRoot()).perform(waitUntilShown(R.id.authorization_image_button, 3000));
+        onView(isRoot()).perform(waitUntilShown(R.id.authorization_image_button, 5000));
         getAllNewsButton().check(matches(isDisplayed()));
         getAllClaimsButton().check(matches(isDisplayed()));
     }

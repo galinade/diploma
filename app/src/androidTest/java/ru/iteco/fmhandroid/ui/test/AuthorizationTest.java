@@ -2,6 +2,8 @@ package ru.iteco.fmhandroid.ui.test;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
+import static ru.iteco.fmhandroid.ui.data.DataHelper.snackEmptyLoginOrPassword;
+import static ru.iteco.fmhandroid.ui.data.DataHelper.snackWrongLoginOrPassword;
 import static ru.iteco.fmhandroid.ui.data.DataHelper.validLoginAndPassword;
 import static ru.iteco.fmhandroid.ui.data.DataHelper.waitUntilShown;
 
@@ -42,11 +44,53 @@ public class AuthorizationTest {
         }
     }
         @Test
-        @DisplayName("Кейс 1.1.1 \"Авторизация пользователя с валидными данными\"")
+        @DisplayName("Авторизация пользователя с валидными данными")
         public void shouldLoginWithValidData() {
             authorizationScreen.validLoginAndPasswordAuthorization(validLoginAndPassword());
             mainScreen.checkMainScreenIsDisplayed();
         }
-
+        @Test
+        @DisplayName("Авторизация незарегистрированного пользователя")
+        public void shouldNotLoginWithInvalidLogin() {
+        authorizationScreen.invalidLoginAuthorization();
+        authorizationScreen.checkSnackIsVisible(ActivityTestRule.getActivity(), snackWrongLoginOrPassword);
     }
+
+        @Test
+        @DisplayName("Авторизация пользователя с невалидным паролем")
+        public void shouldNotLoginWithInvalidPassword() {
+        authorizationScreen.invalidPasswordAuthorization();
+        authorizationScreen.checkSnackIsVisible(ActivityTestRule.getActivity(), snackWrongLoginOrPassword);
+    }
+
+    @Test
+    @DisplayName("Авторизация пользователя при введеном пробеле в поле логин")
+    public void shouldLoginWithLoginWithWhitespace() {
+        authorizationScreen.loginWithWhitespaceAuthorization();
+        mainScreen.checkMainScreenIsDisplayed();
+    }
+
+    @Test
+    @DisplayName("Авторизация пользователя при введеном пробеле в поле пароль")
+    public void shouldNotLoginWithPasswordWithWhitespace() {
+        authorizationScreen.passwordWithWhitespaceAuthorization();
+        authorizationScreen.checkSnackIsVisible(ActivityTestRule.getActivity(), snackWrongLoginOrPassword);
+    }
+
+    @Test
+    @DisplayName("Авторизация пользователя с пустым полем логин")
+    public void shouldNotLoginWithEmptyLoginField() {
+        authorizationScreen.emptyLoginFieldAuthorization();
+        authorizationScreen.checkSnackIsVisible(ActivityTestRule.getActivity(), snackEmptyLoginOrPassword);
+    }
+
+    @Test
+    @DisplayName("Авторизация пользователя с пустым полем пароль")
+    public void shouldNotLoginWithEmptyPasswordField() {
+        authorizationScreen.emptyPasswordFieldAuthorization();
+        authorizationScreen.checkSnackIsVisible(ActivityTestRule.getActivity(), snackEmptyLoginOrPassword);
+    }
+}
+
+
 
