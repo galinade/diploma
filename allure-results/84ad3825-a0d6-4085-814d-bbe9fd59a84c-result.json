@@ -1,0 +1,53 @@
+{
+    "name": "Авторизация пользователя с невалидным паролем",
+    "start": 1694098054482,
+    "stop": 1694098060496,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "84ad3825-a0d6-4085-814d-bbe9fd59a84c",
+    "historyId": "edcc9bdb2c8a293904695764cbd7a265",
+    "fullName": "ru.iteco.fmhandroid.ui.test.AuthorizationTest.shouldNotLoginWithInvalidPassword",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.AuthorizationTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldNotLoginWithInvalidPassword"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.AuthorizationTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(571)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

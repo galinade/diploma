@@ -1,19 +1,17 @@
 package ru.iteco.fmhandroid.ui.pageObject;
+
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
-import static androidx.test.espresso.action.ViewActions.replaceText;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.contrib.RecyclerViewActions.actionOnItemAtPosition;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
-import static androidx.test.espresso.matcher.ViewMatchers.withHint;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
-
 import static ru.iteco.fmhandroid.ui.data.DataHelper.childAtPosition;
 import static ru.iteco.fmhandroid.ui.data.DataHelper.waitUntilShown;
 import static ru.iteco.fmhandroid.ui.data.DataHelper.withIndex;
@@ -23,6 +21,7 @@ import android.os.SystemClock;
 import androidx.test.espresso.ViewInteraction;
 
 import ru.iteco.fmhandroid.R;
+
 public class ClaimsScreen {
     private final ViewInteraction titleLabel = onView(withId(R.id.title_label_text_view));
     private final ViewInteraction executorLabel = onView(withId(R.id.executor_name_label_text_view));
@@ -101,7 +100,6 @@ public class ClaimsScreen {
                     0)));
 
 
-
     private final ViewInteraction createTitle = onView(withId(R.id.custom_app_bar_title_text_view));
     private final ViewInteraction claimsTitle = onView(withId(R.id.custom_app_bar_sub_title_text_view));
 
@@ -109,24 +107,31 @@ public class ClaimsScreen {
     public ViewInteraction getTitleLabel() {
         return titleLabel;
     }
+
     public ViewInteraction getExecutorLabel() {
         return executorLabel;
     }
+
     public ViewInteraction getPlanDateLabel() {
         return planDateLabel;
     }
+
     public ViewInteraction getStatusLabel() {
         return statusLabel;
     }
+
     public ViewInteraction getDescriptionLabel() {
         return descriptionLabel;
     }
+
     public ViewInteraction getAuthorLabel() {
         return authorLabel;
     }
+
     public ViewInteraction getCreateDateLabel() {
         return createDateLabel;
     }
+
     public ViewInteraction getListOfComments() {
         return listOfComments;
     }
@@ -134,72 +139,95 @@ public class ClaimsScreen {
     public ViewInteraction getFilterTitle() {
         return filterTitle;
     }
+
     public ViewInteraction getCheckBoxOpened() {
         return checkBoxOpened;
     }
+
     public ViewInteraction getCheckBoxInProgress() {
         return checkBoxInProgress;
     }
+
     public ViewInteraction getCheckBoxExecuted() {
         return checkBoxExecuted;
     }
+
     public ViewInteraction getCheckBoxCancelled() {
         return checkBoxCancelled;
     }
+
     public ViewInteraction getOkButton() {
         return okButton;
     }
+
     public ViewInteraction getClaimsSectionTitle() {
         return claimsSectionTitle;
     }
+
     public ViewInteraction getFilterButton() {
         return filterButton;
     }
+
     public ViewInteraction getCreateButton() {
         return createButton;
     }
+
     public ViewInteraction getListOfClaims() {
         return listOfClaims;
     }
+
     public ViewInteraction getAddCommentButton() {
         return addCommentButton;
     }
+
     public ViewInteraction getStatusOpened() {
         return statusOpened;
     }
+
     public ViewInteraction getStatusInProgress() {
         return statusInProgress;
     }
+
     public ViewInteraction getStatusExecuted() {
         return statusExecuted;
     }
+
     public ViewInteraction getStatusCancelled() {
         return statusCancelled;
     }
+
     public ViewInteraction getEditCommentButton() {
         return editCommentButton;
     }
+
     public ViewInteraction getLastComment() {
         return lastComment;
     }
+
     public ViewInteraction getEditStatusOfClaimButton() {
         return editStatusOfClaimButton;
     }
+
     public ViewInteraction getEditClaimButton() {
         return editClaimButton;
     }
+
     public ViewInteraction getReturnButton() {
         return returnButton;
     }
+
     public ViewInteraction getThrowOff() {
         return throwOff;
     }
+
     public ViewInteraction getExecute() {
         return execute;
     }
+
     public ViewInteraction getTakeToWork() {
         return takeToWork;
     }
+
     public ViewInteraction getCancel() {
         return cancel;
     }
@@ -207,9 +235,11 @@ public class ClaimsScreen {
     public ViewInteraction getCreateTitle() {
         return createTitle;
     }
+
     public ViewInteraction getClaimsTitle() {
         return claimsTitle;
     }
+
     public void setEditCommentButton(int position) {
         this.editCommentButton = onView(
                 allOf(withId(R.id.edit_comment_image_button), withContentDescription("кнопка редактирования комментария"),
@@ -219,6 +249,7 @@ public class ClaimsScreen {
                                         position),
                                 1)));
     }
+
     //"Проверка отображения экрана детального описания заявки"
     public void checkScreenOfDetailedDescriptionClaimIsDisplayed() {
         onView(isRoot()).perform(waitUntilShown(R.id.title_label_text_view, 3000));
@@ -238,12 +269,14 @@ public class ClaimsScreen {
         getFilterButton().check(matches(isDisplayed()));
         getCreateButton().check(matches(isDisplayed()));
     }
+
     //"Проверка отображения экрана создания заявки"
     public void checkCreateClaimScreenIsDisplayed() {
         onView(isRoot()).perform(waitUntilShown(R.id.custom_app_bar_title_text_view, 3000));
         getCreateTitle().check(matches(isDisplayed()));
         getClaimsTitle().check(matches(isDisplayed()));
     }
+
     //"Нажатие на кнопку Плюс (создать заявку)"
     public void clickButtonCreateClaim() {
         getCreateButton().perform(click());
@@ -326,6 +359,7 @@ public class ClaimsScreen {
         getCheckBoxOpened().perform(click());
         getOkButton().perform(click());
     }
+
     //"Фильтрация заявок по категории \"Открыта\""
     public void filterClaimsOpened() {
         getCheckBoxInProgress().perform(click());

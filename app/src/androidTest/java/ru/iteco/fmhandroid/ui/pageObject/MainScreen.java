@@ -1,4 +1,5 @@
 package ru.iteco.fmhandroid.ui.pageObject;
+
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
@@ -9,22 +10,15 @@ import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
+import static org.hamcrest.Matchers.not;
 import static org.hamcrest.core.Is.is;
-
-
 import static ru.iteco.fmhandroid.ui.data.DataHelper.childAtPosition;
+import static ru.iteco.fmhandroid.ui.data.DataHelper.waitUntilShown;
+import static ru.iteco.fmhandroid.ui.data.DataHelper.withIndex;
 
 import androidx.test.espresso.ViewInteraction;
 
 import ru.iteco.fmhandroid.R;
-
-import static ru.iteco.fmhandroid.ui.data.DataHelper.waitUntilShown;
-import static ru.iteco.fmhandroid.ui.data.DataHelper.withIndex;
-
-
-
-import static org.hamcrest.Matchers.not;
-
 
 
 public class MainScreen {
@@ -38,9 +32,9 @@ public class MainScreen {
     private final ViewInteraction sectionAbout = onView(withText("About"));
     private final ViewInteraction allNewsButton = onView(withId(R.id.all_news_text_view));
     private final ViewInteraction expandNewsFeedButton = onView(allOf(withId(R.id.expand_material_button),
-           childAtPosition(withClassName(is("android.widget.LinearLayout")), childAtPosition(
-                           withClassName(is("android.widget.LinearLayout")), withId(R.id.container_list_news_include_on_fragment_main),
-                           0),
+            childAtPosition(withClassName(is("android.widget.LinearLayout")), childAtPosition(
+                            withClassName(is("android.widget.LinearLayout")), withId(R.id.container_list_news_include_on_fragment_main),
+                            0),
                     4),
             isDisplayed()));
 
@@ -70,43 +64,59 @@ public class MainScreen {
     public ViewInteraction getAvatarImageButton() {
         return avatarImageButton;
     }
+
     public ViewInteraction getExitButton() {
         return exitButton;
     }
+
     public ViewInteraction getMainMenuButton() {
         return mainMenuButton;
     }
+
     public ViewInteraction getSectionMain() {
         return sectionMain;
     }
+
     public ViewInteraction getSectionClaims() {
         return sectionClaims;
     }
+
     public ViewInteraction getSectionNews() {
         return sectionNews;
     }
+
     public ViewInteraction getSectionAbout() {
         return sectionAbout;
     }
-    public ViewInteraction getAllNewsButton() { return allNewsButton; }
+
+    public ViewInteraction getAllNewsButton() {
+        return allNewsButton;
+    }
+
     public ViewInteraction getExpandNewsFeedButton() {
         return expandNewsFeedButton;
     }
+
     public ViewInteraction getExpandNewsDescriptionButton() {
         return expandNewsDescriptionButton;
     }
+
     public ViewInteraction getAllClaimsButton() {
         return allClaimsButton;
     }
+
     public ViewInteraction getExpandClaimsFeedButton() {
         return expandClaimsFeedButton;
     }
+
     public ViewInteraction getCreateClaimButton() {
         return createClaimButton;
     }
+
     public ViewInteraction getListOfClaims() {
         return listOfClaims;
     }
+
     public ViewInteraction getQuotesButton() {
         return quotesButton;
     }
@@ -131,7 +141,6 @@ public class MainScreen {
         onView(isRoot()).perform(waitUntilShown(R.id.expand_material_button, 3000));
         getExpandNewsFeedButton().perform(click());
     }
-
 
 
     //"Переход к экрану О приложении через меню-гамбургер"//
@@ -228,9 +237,6 @@ public class MainScreen {
         getMainMenuButton().perform(click());
         getSectionMain().perform(click());
     }
-
-
-
 
 
 }

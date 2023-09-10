@@ -1,6 +1,5 @@
 package ru.iteco.fmhandroid.ui.pageObject;
 
-import static org.hamcrest.core.IsNot.not;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
@@ -11,8 +10,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withHint;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
-
 import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNot.not;
 import static ru.iteco.fmhandroid.ui.data.DataHelper.emptyLogin;
 import static ru.iteco.fmhandroid.ui.data.DataHelper.emptyPassword;
 import static ru.iteco.fmhandroid.ui.data.DataHelper.invalidLogin;
@@ -87,6 +86,7 @@ public class AuthorizationScreen {
     public void checkSnackIsVisible(@NonNull AppActivity activity, String text) {
         onView(withText(text)).inRoot(withDecorView(not(is(activity.getWindow().getDecorView())))).check(matches(isDisplayed()));
     }
+
     //"Авторизация пользователя с пробелом в поле логин"
     public void loginWithWhitespaceAuthorization() {
         getLoginField().perform(typeText(loginWithWhitespace().getLogin()));

@@ -1,0 +1,53 @@
+{
+    "name": "Просмотр описания новости на экране Новости",
+    "start": 1693998330270,
+    "stop": 1693998336109,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "88251ea9-f43d-43c1-9279-9c2464be70ad",
+    "historyId": "52a7f15425b3de3491bd3d786b00545",
+    "fullName": "ru.iteco.fmhandroid.ui.test.NewsTest.shouldCollapseAndExpandNewsDescription",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.NewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldCollapseAndExpandNewsDescription"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.NewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(726)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

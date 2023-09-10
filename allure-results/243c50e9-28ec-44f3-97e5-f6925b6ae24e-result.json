@@ -1,0 +1,53 @@
+{
+    "name": "Кейс 6.1.1 \"Переход по ссылке на Политику конфиденциальности из раздела О приложении\"",
+    "start": 1693953806401,
+    "stop": 1693953814915,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "243c50e9-28ec-44f3-97e5-f6925b6ae24e",
+    "historyId": "ac57acf4d3503d3f9ad30804148cf0a7",
+    "fullName": "ru.iteco.fmhandroid.ui.test.AboutTest.shouldFollowTheLinkToPrivacyPolicy",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.AboutTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldFollowTheLinkToPrivacyPolicy"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.AboutTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(961)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

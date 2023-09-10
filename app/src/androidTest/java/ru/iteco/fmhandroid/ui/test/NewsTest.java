@@ -26,7 +26,7 @@ public class NewsTest extends BaseAndroidTest {
         controlPanelScreen.checkControlPanelScreenIsDisplayed();
     }
 
-        @Test
+    @Test
     @DisplayName("Просмотр описания новости в разделе Панель управления новостей")
     public void shouldCollapseAndExpandNewsDescriptionOnControlPanelScreen() {
         mainScreen.clickOnAllNewsButton();
@@ -48,6 +48,7 @@ public class NewsTest extends BaseAndroidTest {
         newsScreen.expandNewsDescription(0);
         newsScreen.checkTextOfNewsDescriptionIsVisible(0);
     }
+
     @Test
     @DisplayName("При нажатии на кнопку Фильтр видна Форма фильтрации Новости")
     public void visibleFormFilterNewsScreen() {
@@ -59,6 +60,7 @@ public class NewsTest extends BaseAndroidTest {
         newsScreen.goToFilterNewsScreen();
         newsScreen.checkFilterNewsScreenIsDisplayed();
     }
+
     @Test
     @DisplayName("При нажатии на кнопку Плюс (создать новость) видна Форма Новости")
     public void visibleFormCreatingNewsScreen() {

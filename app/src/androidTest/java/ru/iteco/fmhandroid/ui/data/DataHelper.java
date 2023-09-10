@@ -65,6 +65,7 @@ public class DataHelper {
         String password = "password2";
         return new AuthInfo(login, password);
     }
+
     public static AuthInfo invalidLogin() {
         String login = "login3";
         String password = "password2";
@@ -76,7 +77,6 @@ public class DataHelper {
         String password = "password3";
         return new AuthInfo(login, password);
     }
-
 
 
     public static AuthInfo loginWithWhitespace() {
@@ -108,7 +108,8 @@ public class DataHelper {
 
     public static String snackEmptyLoginOrPassword = "Login and password cannot be empty";
 
-    public static String snackEmptyField = "Поле не может быть пустым.";
+    public static String snackEmptyField = "Login and password cannot be empty";
+
     public static Matcher<View> withIndex(final Matcher<View> matcher, final int index) {
         return new TypeSafeMatcher<View>() {
             int currentIndex = 0;
@@ -214,8 +215,6 @@ public class DataHelper {
             return text[0];
         }
     }
-
-
 
 
     public static class Swipe {

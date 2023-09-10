@@ -1,0 +1,53 @@
+{
+    "name": "Выход из аккаунта",
+    "start": 1694000299872,
+    "stop": 1694000313348,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "2cf796e6-d3c6-4fc4-92cc-608763063b4c",
+    "historyId": "f4b17bee43380d1339bd5775925eef6b",
+    "fullName": "ru.iteco.fmhandroid.ui.test.MainTest.shouldLogout",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.MainTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldLogout"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.MainTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(841)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

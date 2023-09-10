@@ -1,0 +1,53 @@
+{
+    "name": "Кейс 1.1.2 \"Авторизация незарегистрированного пользователя\"",
+    "start": 1693956018542,
+    "stop": 1693956028362,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "57deb047-0bda-442b-b29d-6f0163771390",
+    "historyId": "77f4125067576c98da93dcc6d140cf4f",
+    "fullName": "ru.iteco.fmhandroid.ui.test.AuthorizationTest.shouldNotLoginWithInvalidLogin",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.AuthorizationTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldNotLoginWithInvalidLogin"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.AuthorizationTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(1035)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

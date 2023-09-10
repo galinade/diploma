@@ -1,0 +1,53 @@
+{
+    "name": "Просмотр описания новости в разделе Панель управления новостей",
+    "start": 1694100753873,
+    "stop": 1694100761596,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "2b7a3ca6-34d4-4dbe-896a-f91153a0660c",
+    "historyId": "8ac4def624f74e04998cd7737e5ba2dd",
+    "fullName": "ru.iteco.fmhandroid.ui.test.NewsTest.shouldCollapseAndExpandNewsDescriptionOnControlPanelScreen",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.NewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldCollapseAndExpandNewsDescriptionOnControlPanelScreen"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.NewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(657)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

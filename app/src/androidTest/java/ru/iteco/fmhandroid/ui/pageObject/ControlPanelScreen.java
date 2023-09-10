@@ -1,28 +1,24 @@
 package ru.iteco.fmhandroid.ui.pageObject;
+
 import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.contrib.RecyclerViewActions.actionOnItemAtPosition;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
-
 import static ru.iteco.fmhandroid.ui.data.DataHelper.childAtPosition;
+import static ru.iteco.fmhandroid.ui.data.DataHelper.waitUntilShown;
+import static ru.iteco.fmhandroid.ui.data.DataHelper.withIndex;
 
 import androidx.test.espresso.ViewInteraction;
 
 import ru.iteco.fmhandroid.R;
-
-import static androidx.test.espresso.action.ViewActions.click;
-
-import static androidx.test.espresso.assertion.ViewAssertions.matches;
-import static androidx.test.espresso.contrib.RecyclerViewActions.actionOnItemAtPosition;
-
-import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
-
-import static ru.iteco.fmhandroid.ui.data.DataHelper.waitUntilShown;
-import static ru.iteco.fmhandroid.ui.data.DataHelper.withIndex;
 
 
 public class ControlPanelScreen {
@@ -55,19 +51,27 @@ public class ControlPanelScreen {
     public ViewInteraction getControlPanel() {
         return controlPanel;
     }
+
     public ViewInteraction getSortNewsButton() {
         return sortNewsButton;
     }
+
     public ViewInteraction getFilterNewsButton() {
         return filterNewsButton;
     }
-    public ViewInteraction getCreateNewsButton() { return createNewsButton; }
+
+    public ViewInteraction getCreateNewsButton() {
+        return createNewsButton;
+    }
+
     public ViewInteraction getListOfNews() {
         return listOfNews;
     }
+
     public ViewInteraction getOkDeleteNewsButton() {
         return okDeleteNewsButton;
     }
+
     public ViewInteraction getCancelDeleteNewsButton() {
         return cancelDeleteNewsButton;
     }

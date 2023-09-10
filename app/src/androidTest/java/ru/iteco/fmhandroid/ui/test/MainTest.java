@@ -6,7 +6,6 @@ import androidx.test.filters.LargeTest;
 import org.junit.Test;
 
 import io.qameta.allure.kotlin.junit4.DisplayName;
-
 import ru.iteco.fmhandroid.ui.custom.BaseAndroidTest;
 import ru.iteco.fmhandroid.ui.pageObject.AuthorizationScreen;
 import ru.iteco.fmhandroid.ui.pageObject.ClaimsScreen;
@@ -31,7 +30,7 @@ public class MainTest extends BaseAndroidTest {
     }
 
     @Test
-     @DisplayName("Отображение раздела Новости на экране Главная через тап на кнопку свернуть/развернуть")
+    @DisplayName("Отображение раздела Новости на экране Главная через тап на кнопку свернуть/развернуть")
     public void shouldCollapseAndExpandNewsFeed() {
         mainScreen.expandNewsFeed();
         mainScreen.checkNameAllNewsIsNotVisible();

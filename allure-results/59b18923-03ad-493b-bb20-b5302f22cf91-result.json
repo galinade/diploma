@@ -1,0 +1,53 @@
+{
+    "name": "Авторизация пользователя при введеном пробеле в поле логин",
+    "start": 1694265845373,
+    "stop": 1694265855363,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "59b18923-03ad-493b-bb20-b5302f22cf91",
+    "historyId": "36f62c099f0c6d4dcb6030c68ff31c51",
+    "fullName": "ru.iteco.fmhandroid.ui.test.AuthorizationTest.shouldLoginWithLoginWithWhitespace",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.AuthorizationTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldLoginWithLoginWithWhitespace"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.AuthorizationTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(496)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

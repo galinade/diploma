@@ -1,0 +1,53 @@
+{
+    "name": "При нажатии на кнопку Плюс (создать заявки) видна Форма Заявки",
+    "start": 1694130125048,
+    "stop": 1694130135311,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "46daf2bb-5a35-4841-bc09-4bf7af65a485",
+    "historyId": "cdb05d93005fa16faba698e5c739d125",
+    "fullName": "ru.iteco.fmhandroid.ui.test.ClaimsTest.visibleFormCreatingClaimsScreen",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.ClaimsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "visibleFormCreatingClaimsScreen"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.ClaimsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(1256)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

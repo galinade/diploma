@@ -1,8 +1,8 @@
 package ru.iteco.fmhandroid.ui.test;
+
 import org.junit.Test;
 
 import io.qameta.allure.kotlin.junit4.DisplayName;
-
 import ru.iteco.fmhandroid.ui.custom.BaseAndroidTest;
 import ru.iteco.fmhandroid.ui.pageObject.MainScreen;
 import ru.iteco.fmhandroid.ui.pageObject.QuotesScreen;

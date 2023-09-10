@@ -1,0 +1,53 @@
+{
+    "name": "Переход к экрану детального описания заявки в статусе \"Открыта\"",
+    "start": 1694174305239,
+    "stop": 1694174315668,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "81dc5237-b670-405a-a0cf-ab1b7af24cbc",
+    "historyId": "104ba2d696ae9d12cad62756a504459e",
+    "fullName": "ru.iteco.fmhandroid.ui.test.ClaimsTest.shouldReturnToClaimsScreenFromScreenOfDetailedDescriptionClaimOpened",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.ClaimsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldReturnToClaimsScreenFromScreenOfDetailedDescriptionClaimOpened"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.ClaimsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(616)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

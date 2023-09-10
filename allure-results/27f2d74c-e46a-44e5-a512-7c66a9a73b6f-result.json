@@ -1,0 +1,53 @@
+{
+    "name": "Открытие детального описания заявки через тап на заявку из раздела Заявки",
+    "start": 1694105139432,
+    "stop": 1694105149867,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "27f2d74c-e46a-44e5-a512-7c66a9a73b6f",
+    "historyId": "b6155da25b8c9347f2624a46869c650f",
+    "fullName": "ru.iteco.fmhandroid.ui.test.MainTest.shouldGoToClaimDescriptionWhenClickOnClaim",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.MainTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldGoToClaimDescriptionWhenClickOnClaim"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.MainTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(756)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

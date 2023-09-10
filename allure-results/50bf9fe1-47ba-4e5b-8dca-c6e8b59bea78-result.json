@@ -1,0 +1,53 @@
+{
+    "name": "Возврат к экрану Главная через меню-гамбургер",
+    "start": 1694174886512,
+    "stop": 1694174893093,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "50bf9fe1-47ba-4e5b-8dca-c6e8b59bea78",
+    "historyId": "59bb376050d5ae8aa926f581c44165ac",
+    "fullName": "ru.iteco.fmhandroid.ui.test.MainTest.shouldGoToSectionMainFromMainMenu",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.MainTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldGoToSectionMainFromMainMenu"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.MainTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(696)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

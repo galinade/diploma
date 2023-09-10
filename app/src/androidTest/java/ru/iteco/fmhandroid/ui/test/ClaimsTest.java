@@ -5,7 +5,6 @@ import androidx.test.filters.LargeTest;
 import org.junit.Test;
 
 import io.qameta.allure.kotlin.junit4.DisplayName;
-
 import ru.iteco.fmhandroid.ui.custom.BaseAndroidTest;
 import ru.iteco.fmhandroid.ui.pageObject.ClaimsScreen;
 import ru.iteco.fmhandroid.ui.pageObject.MainScreen;
@@ -17,7 +16,7 @@ public class ClaimsTest extends BaseAndroidTest {
     ClaimsScreen claimsScreen = new ClaimsScreen();
 
     @Test
-    @DisplayName("При нажатии на кнопку Плюс (создать заявки) видна Форма Заявки")
+    @DisplayName("При нажатии на кнопку Плюс (создать заявку) видна Форма Заявки")
     public void visibleFormCreatingClaimsScreen() {
         mainScreen.clickOnAllClaimsButton();
         claimsScreen.checkClaimsScreenIsDisplayed();

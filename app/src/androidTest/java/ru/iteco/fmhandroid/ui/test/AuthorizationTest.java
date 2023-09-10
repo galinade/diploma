@@ -43,22 +43,24 @@ public class AuthorizationTest {
             mainScreen.logout();
         }
     }
-        @Test
-        @DisplayName("Авторизация пользователя с валидными данными")
-        public void shouldLoginWithValidData() {
-            authorizationScreen.validLoginAndPasswordAuthorization(validLoginAndPassword());
-            mainScreen.checkMainScreenIsDisplayed();
-        }
-        @Test
-        @DisplayName("Авторизация незарегистрированного пользователя")
-        public void shouldNotLoginWithInvalidLogin() {
+
+    @Test
+    @DisplayName("Авторизация пользователя с валидными данными")
+    public void shouldLoginWithValidData() {
+        authorizationScreen.validLoginAndPasswordAuthorization(validLoginAndPassword());
+        mainScreen.checkMainScreenIsDisplayed();
+    }
+
+    @Test
+    @DisplayName("Авторизация незарегистрированного пользователя")
+    public void shouldNotLoginWithInvalidLogin() {
         authorizationScreen.invalidLoginAuthorization();
         authorizationScreen.checkSnackIsVisible(ActivityTestRule.getActivity(), snackWrongLoginOrPassword);
     }
 
-        @Test
-        @DisplayName("Авторизация пользователя с невалидным паролем")
-        public void shouldNotLoginWithInvalidPassword() {
+    @Test
+    @DisplayName("Авторизация пользователя с невалидным паролем")
+    public void shouldNotLoginWithInvalidPassword() {
         authorizationScreen.invalidPasswordAuthorization();
         authorizationScreen.checkSnackIsVisible(ActivityTestRule.getActivity(), snackWrongLoginOrPassword);
     }

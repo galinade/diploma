@@ -1,0 +1,53 @@
+{
+    "name": "Переход к разделу Главная из раздела О приложении через стрелку Назад",
+    "start": 1694097890359,
+    "stop": 1694097896640,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "a81e6c0c-8ac9-49d9-a7c1-a109d6e764ee",
+    "historyId": "80dd8a56afad1c10548f203614b05fdf",
+    "fullName": "ru.iteco.fmhandroid.ui.test.AboutTest.shouldGoToSectionMainFromSectionAbout",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.AboutTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldGoToSectionMainFromSectionAbout"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.AboutTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(541)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

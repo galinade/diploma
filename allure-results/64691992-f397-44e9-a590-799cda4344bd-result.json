@@ -1,0 +1,53 @@
+{
+    "name": "shouldCollapseAndExpandNewsDescriptionOnControlPanelScreen",
+    "start": 1693996606598,
+    "stop": 1693996614260,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "64691992-f397-44e9-a590-799cda4344bd",
+    "historyId": "8ac4def624f74e04998cd7737e5ba2dd",
+    "fullName": "ru.iteco.fmhandroid.ui.test.NewsTest.shouldCollapseAndExpandNewsDescriptionOnControlPanelScreen",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.NewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldCollapseAndExpandNewsDescriptionOnControlPanelScreen"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.NewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(671)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

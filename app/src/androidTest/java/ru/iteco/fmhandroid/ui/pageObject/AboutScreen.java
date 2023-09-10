@@ -1,4 +1,5 @@
 package ru.iteco.fmhandroid.ui.pageObject;
+
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
@@ -6,7 +7,6 @@ import static androidx.test.espresso.matcher.ViewMatchers.isClickable;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
-
 import static ru.iteco.fmhandroid.ui.data.DataHelper.waitUntilShown;
 
 import androidx.test.espresso.ViewInteraction;
@@ -20,14 +20,22 @@ public class AboutScreen {
     private final ViewInteraction termsOfUseLink = onView(withId(R.id.about_terms_of_use_value_text_view));
     private final ViewInteraction backButton = onView(withId(R.id.about_back_image_button));
 
-    public ViewInteraction getVersion() { return version; }
-    public ViewInteraction getNumberVersion() { return numberVersion; }
+    public ViewInteraction getVersion() {
+        return version;
+    }
+
+    public ViewInteraction getNumberVersion() {
+        return numberVersion;
+    }
+
     public ViewInteraction getPrivacyPolicyLink() {
         return privacyPolicyLink;
     }
+
     public ViewInteraction getTermsOfUseLink() {
         return termsOfUseLink;
     }
+
     public ViewInteraction getBackButton() {
         return backButton;
     }
@@ -38,6 +46,7 @@ public class AboutScreen {
         getVersion().check(matches(isDisplayed()));
         getNumberVersion().check(matches(isDisplayed()));
     }
+
     //"Проверка кликабельности ссылки Политика конфиденциальности"
     public void checkPrivacyPolicyLinkIsClickable() {
         getPrivacyPolicyLink().check(matches(isClickable()));

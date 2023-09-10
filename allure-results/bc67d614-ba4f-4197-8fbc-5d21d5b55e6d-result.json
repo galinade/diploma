@@ -1,0 +1,53 @@
+{
+    "name": "При нажатии на кнопку Плюс (создать новость) видна Форма Новости",
+    "start": 1694273007160,
+    "stop": 1694273014956,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "bc67d614-ba4f-4197-8fbc-5d21d5b55e6d",
+    "historyId": "ebc67a117bec43984b69a1be2e944273",
+    "fullName": "ru.iteco.fmhandroid.ui.test.NewsTest.visibleFormCreatingNewsScreen",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.NewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "visibleFormCreatingNewsScreen"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.NewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(596)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

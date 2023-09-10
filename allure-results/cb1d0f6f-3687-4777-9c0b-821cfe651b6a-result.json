@@ -1,0 +1,56 @@
+{
+    "name": "Переход к экрану детального описания заявки в статусе \"Открыта\"",
+    "start": 1694272923634,
+    "stop": 1694272931941,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "broken",
+    "statusDetails": {
+        "message": "Class 'org.hamcrest.StringDescription' does not implement interface 'java.lang.Iterable' in call to 'java.util.Iterator java.lang.Iterable.iterator()' (declaration of 'org.hamcrest.BaseDescription' appears in /data/app/ru.iteco.fmhandroid.test-czWV3gWUt2r8bbGNeg1C3A==/base.apk)",
+        "trace": "java.lang.IncompatibleClassChangeError: Class 'org.hamcrest.StringDescription' does not implement interface 'java.lang.Iterable' in call to 'java.util.Iterator java.lang.Iterable.iterator()' (declaration of 'org.hamcrest.BaseDescription' appears in /data/app/ru.iteco.fmhandroid.test-czWV3gWUt2r8bbGNeg1C3A==/base.apk)\n\tat org.hamcrest.BaseDescription.appendValueList(BaseDescription.java:81)\n\tat androidx.test.espresso.matcher.ViewMatchers.getMismatchDescriptionString(ViewMatchers.java:3)\n\tat androidx.test.espresso.matcher.ViewMatchers.assertThat(ViewMatchers.java:5)\n\tat androidx.test.espresso.assertion.ViewAssertions$MatchesViewAssertion.check(ViewAssertions.java:7)\n\tat androidx.test.espresso.ViewInteraction$SingleExecutionViewAssertion.check(ViewInteraction.java:2)\n\tat androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:14)\n\tat androidx.test.espresso.ViewInteraction$2.call(ViewInteraction.java:1)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat android.os.Handler.handleCallback(Handler.java:883)\n\tat android.os.Handler.dispatchMessage(Handler.java:100)\n\tat android.os.Looper.loop(Looper.java:214)\n\tat android.app.ActivityThread.main(ActivityThread.java:7356)\n\tat java.lang.reflect.Method.invoke(Native Method)\n\tat com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)\n\tat com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)\n"
+    },
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "cb1d0f6f-3687-4777-9c0b-821cfe651b6a",
+    "historyId": "104ba2d696ae9d12cad62756a504459e",
+    "fullName": "ru.iteco.fmhandroid.ui.test.ClaimsTest.shouldReturnToClaimsScreenFromScreenOfDetailedDescriptionClaimOpened",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.ClaimsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldReturnToClaimsScreenFromScreenOfDetailedDescriptionClaimOpened"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.ClaimsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(576)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

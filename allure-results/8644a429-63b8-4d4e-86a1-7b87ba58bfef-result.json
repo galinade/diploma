@@ -1,0 +1,53 @@
+{
+    "name": "Переход по ссылке на Политику конфиденциальности из раздела О приложении",
+    "start": 1694173973466,
+    "stop": 1694173980544,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "8644a429-63b8-4d4e-86a1-7b87ba58bfef",
+    "historyId": "ac57acf4d3503d3f9ad30804148cf0a7",
+    "fullName": "ru.iteco.fmhandroid.ui.test.AboutTest.shouldFollowTheLinkToPrivacyPolicy",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.AboutTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldFollowTheLinkToPrivacyPolicy"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.AboutTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(576)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

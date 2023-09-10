@@ -9,19 +9,15 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
-
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
-
+import static org.hamcrest.core.IsNot.not;
 import static ru.iteco.fmhandroid.ui.data.DataHelper.childAtPosition;
 
 import androidx.annotation.NonNull;
 import androidx.test.espresso.ViewInteraction;
 
 import ru.iteco.fmhandroid.ui.AppActivity;
-
-import static org.hamcrest.core.IsNot.not;
-
 
 
 public class WatchScreen {
@@ -56,15 +52,19 @@ public class WatchScreen {
     public ViewInteraction getOkButton() {
         return okButton;
     }
+
     public ViewInteraction getOpenKeyboardButton() {
         return openKeyboardButton;
     }
+
     public ViewInteraction getHourField() {
         return hourField;
     }
+
     public ViewInteraction getMinuteField() {
         return minuteField;
     }
+
     // Нажатие на кнопку ОК
     public void clickOnOkButton() {
         getOkButton().perform(click());

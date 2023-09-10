@@ -1,0 +1,53 @@
+{
+    "name": "При нажатии на кнопку Фильтр видна Форма фильтрации",
+    "start": 1694116576213,
+    "stop": 1694116584475,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "7c930d67-2b8b-40a2-87e1-143a1b6f04b3",
+    "historyId": "2d4b47e2a9698af3cd862ec04747083",
+    "fullName": "ru.iteco.fmhandroid.ui.test.NewsTest.visibleFormFilterNewsScreen",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui.test"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.test.NewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "visibleFormFilterNewsScreen"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.test.NewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(1105)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

@@ -1,4 +1,5 @@
 package ru.iteco.fmhandroid.ui.pageObject;
+
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
@@ -10,7 +11,6 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
-
 import static ru.iteco.fmhandroid.ui.data.DataHelper.childAtPosition;
 import static ru.iteco.fmhandroid.ui.data.DataHelper.waitUntilShown;
 import static ru.iteco.fmhandroid.ui.data.DataHelper.withIndex;
@@ -39,25 +39,35 @@ public class NewsScreen {
     public ViewInteraction getNewsSectionTitle() {
         return newsSectionTitle;
     }
+
     public ViewInteraction getSortNewsButton() {
         return sortNewsButton;
     }
+
     public ViewInteraction getFilterNewsButton() {
         return filterNewsButton;
     }
+
     public ViewInteraction getEditNewsButton() {
         return editNewsButton;
     }
+
     public ViewInteraction getListOfNews() {
         return listOfNews;
     }
+
     public ViewInteraction getExpandNewsDescriptionButton() {
         return expandNewsDescriptionButton;
     }
-    public ViewInteraction getFilterTitle() {return filterTitle;}
+
+    public ViewInteraction getFilterTitle() {
+        return filterTitle;
+    }
+
     public ViewInteraction getCreateTitle() {
         return createTitle;
     }
+
     public ViewInteraction getNewsTitle() {
         return newsTitle;
     }
@@ -96,6 +106,7 @@ public class NewsScreen {
     public void checkTextOfNewsDescriptionIsVisible(int position) {
         onView(withIndex(withId(R.id.news_item_description_text_view), position)).check(matches(isDisplayed()));
     }
+
     //"Проверка отображения экрана Фильтрация новостей"
     public void checkFilterNewsScreenIsDisplayed() {
         onView(isRoot()).perform(waitUntilShown(R.id.filter_news_title_text_view, 3000));

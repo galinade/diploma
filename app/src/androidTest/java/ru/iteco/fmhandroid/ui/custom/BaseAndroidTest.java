@@ -1,22 +1,20 @@
 package ru.iteco.fmhandroid.ui.custom;
 
 import static androidx.test.espresso.Espresso.onView;
-        import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
-
+import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
 import static ru.iteco.fmhandroid.ui.data.DataHelper.validLoginAndPassword;
 import static ru.iteco.fmhandroid.ui.data.DataHelper.waitUntilShown;
 
 import androidx.test.espresso.PerformException;
-        import androidx.test.rule.ActivityTestRule;
+import androidx.test.rule.ActivityTestRule;
 
-        import org.junit.Before;
-        import org.junit.Rule;
-        import org.junit.runner.RunWith;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.runner.RunWith;
 
-        import io.qameta.allure.android.runners.AllureAndroidJUnit4;
-
-        import ru.iteco.fmhandroid.R;
-        import ru.iteco.fmhandroid.ui.AppActivity;
+import io.qameta.allure.android.runners.AllureAndroidJUnit4;
+import ru.iteco.fmhandroid.R;
+import ru.iteco.fmhandroid.ui.AppActivity;
 import ru.iteco.fmhandroid.ui.pageObject.AuthorizationScreen;
 import ru.iteco.fmhandroid.ui.pageObject.MainScreen;
 
@@ -26,7 +24,7 @@ public abstract class BaseAndroidTest {
     @Rule
     public androidx.test.rule.ActivityTestRule<AppActivity> ActivityTestRule = new ActivityTestRule<>(AppActivity.class);
 
-    AuthorizationScreen authorizationScreen= new AuthorizationScreen();
+    AuthorizationScreen authorizationScreen = new AuthorizationScreen();
     MainScreen mainScreen = new MainScreen();
 
     @Before
